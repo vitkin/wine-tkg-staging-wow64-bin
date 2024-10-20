@@ -1,5 +1,5 @@
 pkgname="wine-tkg-staging-wow64-bin"
-pkgver=9.19
+pkgver=9.20
 pkgrel=1
 pkgdesc="A compatibility layer for running Windows programs (WOW64 with TkG-Staging patches)"
 url="https://github.com/Kron4ek/Wine-Builds"
