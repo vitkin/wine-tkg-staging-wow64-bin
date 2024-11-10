@@ -1,6 +1,6 @@
 pkgbase = wine-tkg-staging-wow64-bin
 	pkgdesc = A compatibility layer for running Windows programs (WOW64 with TkG-Staging patches)
-	pkgver = 9.20
+	pkgver = 9.21
 	pkgrel = 1
 	url = https://github.com/Kron4ek/Wine-Builds
 	arch = x86_64
@@ -27,11 +27,11 @@ pkgbase = wine-tkg-staging-wow64-bin
 	depends = wayland
 	depends = desktop-file-utils
 	depends = libgphoto2
-	provides = wine=9.20
-	provides = wine-staging=9.20
-	provides = wine-wow64=9.20
+	provides = wine=9.21
+	provides = wine-staging=9.21
+	provides = wine-wow64=9.21
 	conflicts = wine
-	source = https://github.com/Kron4ek/Wine-Builds/releases/download/9.20/wine-9.20-staging-tkg-amd64-wow64.tar.xz
-	sha256sums = 3a8724790dbef4e1bdfc459c8573bcf3a1af33b3739ddfd0a85dbf8de8342e31
+	source = https://github.com/Kron4ek/Wine-Builds/releases/download/9.21/wine-9.21-staging-tkg-amd64-wow64.tar.xz
+	sha256sums = 0ba9f099e6f9744344cd79a632c56a1d91b02c5bccc913e096b4655eab5a67a8
 
 pkgname = wine-tkg-staging-wow64-bin
