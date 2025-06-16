@@ -1,6 +1,6 @@
 # Maintainer: Victor "psygreg" Gregory <psygreg_at_pm_dot_me>
 pkgname="wine-tkg-staging-wow64-bin"
-pkgver=10.9
+pkgver=10.10
 pkgrel=1
 pkgdesc="A compatibility layer for running Windows programs (WOW64 with TkG-Staging patches)"
 url="https://github.com/Kron4ek/Wine-Builds"
@@ -14,7 +14,7 @@ provides=(
 )
 conflicts=("wine")
 source=("https://github.com/Kron4ek/Wine-Builds/releases/download/${pkgver}/wine-${pkgver}-staging-tkg-amd64-wow64.tar.xz")
-sha256sums=('6fd81f4dc0ceac514a0dee6ea2b63be28889adec7dedaa79300eb7f29ade4f0e')
+sha256sums=('ef40107cfeb9cc3e50decc53b84d6e3d83304866ca6c447ced5941e51a521674')
 
 package() {
 
