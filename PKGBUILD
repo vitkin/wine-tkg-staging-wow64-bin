@@ -14,7 +14,7 @@ provides=(
 )
 conflicts=("wine")
 source=("https://github.com/Kron4ek/Wine-Builds/releases/download/${pkgver}/wine-${pkgver}-staging-tkg-amd64-wow64.tar.xz")
-sha256sums=('e6ec6a8213599583fa2c48e7b0c9ff5faa6a73ae01fabdfb283b5250ffe33867')
+sha256sums=('f1ae147d79204a76cba5ae082aa96c48a5796252aed3c4143eb855c90de5e758')
 
 package() {
 
