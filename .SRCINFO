@@ -28,7 +28,7 @@ pkgbase = wine-tkg-staging-wow64-bin
 	depends = desktop-file-utils
 	depends = libgphoto2
 	depends = glibc
-	provides = wine=11.1
+	provides = wine=11.2
 	provides = wine-staging=11.2
 	provides = wine-wow64=11.2
 	conflicts = wine
