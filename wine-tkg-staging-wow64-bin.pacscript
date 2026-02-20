@@ -2,17 +2,14 @@
 # shellcheck disable=SC2148
 
 pkgname="wine-tkg-staging-wow64-bin"
-pkgver="11.1"
+pkgver="11.2"
 pkgrel="1"
-pkgdesc="A compatibility layer for running Windows programs (TkG-Staging patches, pure 64-bit WoW64 mode)"
+pkgdesc="A compatibility layer for running Windows programs (WOW64 with TkG-Staging patches)"
 maintainer="Victor Itkin <635926+vitkin@users.noreply.github.com>"
-arch="amd64"
+arch=('amd64')
+repology=("project: ${pkgname}")
 url="https://github.com/Kron4ek/Wine-Builds"
 license=('LGPL-2.1-or-later')
-provides=("wine" "wine-staging")
-conflicts=("wine" "wine-staging")
-source=("https://github.com/Kron4ek/Wine-Builds/releases/download/${pkgver}/wine-${pkgver}-staging-tkg-amd64-wow64.tar.xz")
-sha256sums=('fc467ae6879b97612263abfdbe034a0e6344f95bd9a3668c3f0b1f0e7f9537f1')
 
 depends=(
     "libasound2t64"
@@ -38,10 +35,9 @@ depends=(
     "libxext6"
     "libxkbcommon0"
     "libxkbregistry0"
-    "ocl-icd-libopencl1"
+    "ocl-icd-libopencl1 | libopencl-1.2-1"
     "libasound2-plugins"
-    "libncurses6"
-    "desktop-file-utils"
+    "libncurses6 | libncurses5 | libncurses"
 )
 
 recommends=(
@@ -51,17 +47,18 @@ recommends=(
     "libdbus-1-3"
     "libfontconfig1"
     "libfreetype6"
-    "libglu1-mesa"
-    "libgnutls30t64"
+    "libglu1-mesa | libglu1"
+    "libgnutls30 | libgnutls-deb0-28 | libgnutls26"
     "libgssapi-krb5-2"
-    "libgtk-3-0t64"
+    "libgtk-3-0"
     "libkrb5-3"
-    "libodbc2"
+    "libodbc2 | libodbc1"
+    "libpcap0.8"
     "libsdl2-2.0-0"
-    "libv4l-0t64"
-    "libva-drm2"
-    "libva-x11-2"
-    "libva2"
+    "libv4l-0"
+    "libva-drm2 | libva-drm1"
+    "libva-x11-2 | libva-x11-1"
+    "libva2 | libva1"
     "libxcomposite1"
     "libxcursor1"
     "libxfixes3"
@@ -70,10 +67,22 @@ recommends=(
     "libxrandr2"
     "libxrender1"
     "libxxf86vm1"
-    "libvulkan1"
 )
 
+provides=(
+    "wine=${pkgver}"
+    "wine-staging=${pkgver}"
+    "wine-wow64=${pkgver}"
+)
+
+conflicts=("wine")
+
+source=("https://github.com/Kron4ek/Wine-Builds/releases/download/${pkgver}/wine-${pkgver}-staging-tkg-amd64-wow64.tar.xz")
+
+sha256sums=('869dc1039a03f845116cf1134e1d69f1947df7f48d5542cd259452708c935e1c')
+
 package() {
+
     local _install_path="/opt/wine-tkg-staging-wow64"
     
     # shellcheck disable=SC2164
